@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 90: Our Team</title>
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
+          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous">
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:500,900|Source+Sans+Pro:300,700&display=swap">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Layouts -->
+    <link rel="stylesheet" href="../homepage.css"> 
+    <link rel="stylesheet" href="../layout/team.css"> 
+    <link rel="stylesheet" href="../layout/navigation-menu.css">
+    <link rel="stylesheet" href="../swiper-bundle.min.css">
+    <link rel="icon" href="../image/P90_Icon.svg" type="x-icon"/>
+    <style>
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: 1B5BC2; /* Example background color */
+        }
+      
+        .navigation-logo {
+            flex: 1;
+        }
+      
+        .navigation-menu {
+            display: flex;
+            flex: 2;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+      
+        .nav-item {
+            font-family: Poppins, sans-serif;
+            padding: 11px 13px;
+            cursor: pointer;
+        }
+      
+        @media (max-width: 991px) {
+            .nav-item {
+                white-space: initial;
+            }
+        }
+
+        .banner {
+            background: linear-gradient(
+                180deg,
+                #000 0%,
+                #6f6c6c 10%,
+                #6f6c6c 90%,
+                #000 100%
+            );
+            margin-top: 65px;
+            width: 100%;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            justify-content: center;
+            padding: 60px; /* Adjust padding as needed */
+            height: 800px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: 500 60px/150% Poppins, sans-serif;
+        }
+        @media (max-width: 991px) {
+            .banner {
+                max-width: 100%;
+                font-size: 40px;
+                margin-top: 15px;
+                padding: 60px 0px;
+                height: auto; /* Adjust height for smaller screens if needed */
+            }
+        }
+
+        .div {
+            color: #fff;
+            text-align: center;
+            font: 500 60px/150% Poppins, sans-serif;
+        }
+        @media (max-width: 991px) {
+            .div {
+                max-width: 100%;
+                font-size: 40px;
+                margin-top: 15px;
+                padding: 0px 0px;
+                height: auto; /* Adjust height for smaller screens if needed */
+            }
+        }
+
+        .infoSpacing {
+            display: flex;
+            align-items: center; /* Aligns items vertically in the center */
+            gap: 20px; /* Adds space between the text and image */
+        }
+
+        .content.purpose {
+            flex: 1; /* Allows the text content to take up the remaining space */
+        }
+
+        .aligned-image {
+            width: 200px;
+            clip-path: inset(5%); /* Crops 5% from each side of the image */
+        }
+
+        .reverse .content.purpose {
+            order: 2; /* Ensure the text content is on the right */
+        }
+
+        .reverse .aligned-image {
+            order: 1; /* Ensure the image is on the left */
+        }
+
+        /* Specific sizes for each section */
+        .who-we-are .content.purpose {
+            width: 568.46px;
+            height: 254.78px;
+        }
+
+        .who-we-are .aligned-image {
+            width: 250px;
+            height: 239px;
+        }
+
+        /* Styles for testimonials section */
+        .testimonial-section {
+            display: flex;
+            justify-content: center; /* Center the testimonial section */
+            gap: 20px;
+            font-size: 20px;
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 0.2px;
+            line-height: 30px;
+        }
+        @media (max-width: 991px) {
+            .testimonial-section {
+                flex-wrap: wrap;
+                margin-top: 40px;
+            }
+        }
+        .testimonial-img {
+            aspect-ratio: 0.56;
+            object-fit: auto;
+            object-position: center;
+            width: 45px;
+            stroke-width: 10px;
+            stroke: #fff;
+            border-color: rgba(255, 255, 255, 1);
+            border-style: solid;
+            border-width: 10px;
+            margin: auto 0;
+        }
+        .testimonial-text {
+            font-family: Poppins, sans-serif;
+            border-radius: 20px;
+            background-color: #1b5bc2;
+            align-items: center;
+            justify-content: center;
+            padding: 87px 60px 80px;
+        }
+        @media (max-width: 991px) {
+            .testimonial-text {
+                padding: 0 20px;
+            }
+        }
+        .testimonial-img-2 {
+            aspect-ratio: 0.57;
+            object-fit: auto;
+            object-position: center;
+            width: 46px;
+            stroke-width: 10px;
+            stroke: #fff;
+            border-color: rgba(255, 255, 255, 1);
+            border-style: solid;
+            border-width: 10px;
+            margin: auto 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Page -->
+    <div class="main">
+        <!-- Navigation Menu -->
+        <header>
+            <div class="navigation-logo">
+                <a href="../homepage.html"><img src="../image/P90_Homepage_Logo.svg" alt="Project 90 Logo" width="15%"/></a>
+            </div>
+            <nav class="navigation-menu">
+                <div class="nav-item">About Us</div>
+                <div class="nav-item">Sponsors</div>
+                <div class="nav-item">Projects</div>
+                <div class="nav-item">Our Team</div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="banner">Photo showing the vision of Project90</div>
+
+    <div class="div">Meet Project90</div>
+
+    <!-- Who We Are -->
+    <section class="infoSpacing who-we-are">
+        <div class="content purpose">
+            <h1 class="text">Who We Are</h1>
+            <p>Project90 is a student-run club at the University of Calgary dedicated to making positive impacts on both local and global communities. By applying theoretical knowledge to real-world problems, we aim to support underprivileged communities and foster sustainable development.</p>
+        </div>
+        <img class="aligned-image" src="4.svg" alt="Project Image">
+    </section>
+
+    <!-- Our Mission -->
+    <section class="infoSpacing reverse">
+        <img class="aligned-image" src="3.svg" alt="Project Image">
+        <div class="content purpose">
+            <h1 class="text">Our Mission</h1>
+            <p>We partner with NGOs and non-profits to offer University of Calgary students opportunities to work on projects that empower communities locally and globally. Through diverse projects, we aim to teach the next generation of engineers critical thinking and problem-solving skills to develop innovative solutions for various challenges.</p>
+        </div>
+    </section>
+
+    <!-- Our Philosophy -->
+    <section class="infoSpacing our-philosophy">
+        <div class="content purpose">
+            <h1 class="text">Our Philosophy</h1>
+            <p>“We learned that 90% of the engineering resources in the world benefits 10% of the world,” says John Ip, Project90’s second president. This realization inspired our slogan, "Engineering for the other 90%." While we emphasize engineering, we welcome students from all disciplines, including science, business, and other fields, to contribute their expertise and passion to our initiatives.</p>
+        </div>
+        <img class="aligned-image" src="2.svg" alt="Project Image">
+    </section>
+
+    <!-- Be Part of Our Team -->
+    <section class="infoSpacing reverse">
+        <img class="aligned-image" src="1.svg" alt="Project Image">
+        <div class="content purpose">
+            <h1 class="text">Be Part of Our Team</h1>
+            <p>If you're passionate about making a difference and want to contribute to a legacy of designing a better world, we welcome you to join Project90. Together, we can create a lasting impact on communities in need.</p>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <div class="testimonial-section">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a8642346f263ef3b7a7fe66b86d659343e961004e2beef6381aaa842e3ecbd66?" class="testimonial-img" />
+        <div class="testimonial-text">
+            Add Testimonial Template here
+            <br />
+            (later)
+        </div>
+        <div class="testimonial-text">
+            Add Testimonial Template here
+            <br />
+            (later)
+        </div>
+        <div class="testimonial-text">
+            Add Testimonial Template here
+            <br />
+            (later)
+        </div>
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c29774fbe4f15cd08e9d76d45dab47d1ebaa97e1c8fc95e04c04dd7a75d9d418?" class="testimonial-img-2" />
+    </div>
+
+</body>
+</html>
